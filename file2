@@ -1,10 +1,8 @@
 select * from(select deptno,year,
 'P='||SUM(decode(result,'P',1,0))||','||'F='||SUM(decode(result,'F',1,0)) RES
 from student_details
-select * from emp
 GROUP BY DEPTNO,YEAR
 order by deptno,year)
 pivot( for year in(1 I,2 II,3 III,4 IV))
 
 hai bhargav
-
